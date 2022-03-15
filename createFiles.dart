@@ -12,7 +12,7 @@ void main(){
 // stdout.write("enter scaore number  :");
 //    int score=int.parse(stdin.readLineSync()!);
 
-for(int ac=0;ac<10;ac++){
+for(int ac=0;ac<2;ac++){
   stdout.write("enter id number  :");
    int id=int.parse(stdin.readLineSync()!);
 stdout.write("enter name  :");
@@ -25,7 +25,11 @@ stdout.write("enter scaore subject number $a  :");
    }   
   var news=a.writeAsStringSync(a.readAsStringSync()+"\n${id}\t${name}\t${totalsc}\t${totalsc/500*100}\n");
   // print(newstoString);
-
+var brea=a.readAsLinesSync();
+for(int ind=0;ind<brea.length;ind++){
+  var c=brea[ind].toString().split("\t");
+  print("id :${c[0]} username  :${c[1]} total score :${c[2]} percentage :${c[3]}");
+}
 
 }
 
